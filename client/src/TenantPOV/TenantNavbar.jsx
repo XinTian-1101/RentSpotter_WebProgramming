@@ -12,6 +12,9 @@ const TenantNavbar = () => {
 
   useEffect(() => {
     if (
+      location.pathname.includes('/tenantViewPropertyActive')
+    ) {
+    } else if (
       location.pathname.includes('/tenantApplication') ||
       location.pathname.includes('/tenantViewPropertyLease') ||
       location.pathname.includes('/tenantViewPropertyPending') ||
@@ -26,8 +29,7 @@ const TenantNavbar = () => {
         setActiveItem('Property');
     } else if (
         location.pathname.includes('/tenantRent') ||
-        location.pathname.includes('/tenantComment') ||
-        location.pathname.includes('/tenantViewPropertyActive')
+        location.pathname.includes('/tenantComment') 
     ) {
         setActiveItem('Rental History');
     } else if (location.pathname.includes('/tenantProfileEdit')) {
