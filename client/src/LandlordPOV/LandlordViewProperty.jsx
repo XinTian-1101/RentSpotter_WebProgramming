@@ -83,33 +83,45 @@ const LandlordViewProperty = () => {
     };
   
     const handleDeleteProperty = async () => {
-      try {
-        const response = await axios.delete(`/api/landlord/properties/delete/${propertyId}`);
-        if (response.status === 200) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          Swal.fire({
-            title: 'Deleted',
-            text: 'Property deleted successfully',
-            icon: 'success',
-            confirmButtonColor: "#FF8C22",
-            confirmButtonText: 'Ok',
-            customClass: {
-              confirmButton: 'my-confirm-button-class-success'
+      Swal.fire({
+        title: 'Confirm Deletion',
+        text: 'Are you sure you want to delete this property?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: "#FF8C22",
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          try {
+            const response = await axios.delete(`/api/landlord/properties/delete/${propertyId}`);
+            if (response.status === 200) {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              Swal.fire({
+                title: 'Deleted',
+                text: 'Property deleted successfully',
+                icon: 'success',
+                confirmButtonColor: "#FF8C22",
+                confirmButtonText: 'Ok',
+                customClass: {
+                  confirmButton: 'my-confirm-button-class-success'
+                }
+              }).then(() => {
+                nav('/landlordHome');
+              });
+            }
+          } catch (error) {
+            console.error('Error deleting property:', error);
+            Swal.fire({
+              title: 'Error',
+              text: 'Failed to delete property. Please try again later.',
+              icon: 'error',
+              confirmButtonColor: "#FF8C22",
+              confirmButtonText: 'Ok',
+            });
           }
-          }).then(() => {
-            nav('/landlordHome');
-          });
         }
-      } catch (error) {
-        console.error('Error deleting property:', error);
-        Swal.fire({
-          title: 'Error',
-          text: 'Failed to delete property. Please try again later.',
-          icon: 'error',
-          confirmButtonColor: "#FF8C22",
-          confirmButtonText: 'Ok',
-        });
-      }
+      });
     };
 
     return (
