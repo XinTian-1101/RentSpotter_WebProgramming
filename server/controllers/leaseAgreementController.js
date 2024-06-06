@@ -333,7 +333,6 @@ exports.getLeaseAgreements = async (req, res) => {
     // Find applications by tenantId and exclude those with applicationStatus "Active"
     const response = await Lease.find({
       tenantId: userId,
-      leaseStatus: "Effective",
     }).sort({ createdAt: -1 });
 
     return res.status(200).json(response);

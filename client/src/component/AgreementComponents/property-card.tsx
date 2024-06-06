@@ -47,7 +47,7 @@ const PropertyCard = ({
   }
 
   const handleViewPropertyStatus = () => {
-    if (status == "Effective") {
+    if (status == "Effective" || status == "Expired") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       nav(`/tenantViewAgreement/${leaseAgreementId}`);
     }
