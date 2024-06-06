@@ -135,6 +135,10 @@ const LandlordApplicantFeedback = () => {
         text: "Reject Successfully",
         icon: "success",
         confirmButtonColor: "#FF8C22",
+        confirmButtonText: "OK",
+        customClass: {
+          confirmButton: 'my-confirm-button-class-success'
+      }
       }).then((result) => {
         if (result.isConfirmed) {
           window.scrollTo({ top: 0, behavior: "smooth" });

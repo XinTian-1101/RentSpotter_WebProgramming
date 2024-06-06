@@ -28,6 +28,18 @@
   cursor: pointer;
 }
 
+
+.history-listing .Expired-btn {
+  background-color: #333f48;
+  color: white;
+  border: none;
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
 .facilities-icons {
   display: flex;
   column-gap: 5em;
@@ -69,7 +81,8 @@
 
 .history-listing .view-lease-btn,
 .history-listing .pending-btn,
-.history-listing .rejected-btn {
+.history-listing .rejected-btn,
+.history-listing .Expired-btn  {
   position: absolute;
   right: 0.001em;
   z-index: 2;

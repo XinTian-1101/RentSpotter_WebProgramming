@@ -36,6 +36,15 @@
     font-size: 28px;
 }  
 
+.my-title-class_login{
+    margin-top: -0.2em;
+    color: #FF5C00;
+    font-weight: bold;
+    font-family: "Poppins";
+    font-size: 28px;
+    padding-bottom: 0.25em;
+}
+
 .my-loginText-class{
     line-height: 3em;
 }

@@ -98,7 +98,7 @@ const PropertyCard = ({
             <button className="pending-btn">Active</button>
           )}
           {status != "Effective" && (
-            <button className="rejected-btn">Expired</button>
+            <button className="Expired-btn">Expired</button>
           )}
           <h2 className="propertyPriceApplication">{price}</h2>
         </div>
