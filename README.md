@@ -6,6 +6,6 @@ The aim of our project is to **develop a website** that serves as an **intermedi
 
 2. For **tenants**, the platform allows viewing property listings as a guest or registering to perform additional actions. Tenants can filter property listings using various options, apply for desired properties, and respond to lease agreements sent by landlords to activate the contract. Furthermore, tenants can view ratings and comments related to the property and landlord, providing valuable references before applying.
 
-To implement this system, we utilized MongoDB as our database solution, offering a reliable and scalable cloud-based database. MongoDB's flexibility and robustness have been crucial in supporting the platform's functionality.
+To implement this system, we utilized MongoDB as our database solution, offering a reliable and scalable cloud-based database.
 
 **Branch "rental_rate_second" was the complete modules.
