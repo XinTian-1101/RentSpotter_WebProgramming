@@ -1,4 +1,5 @@
 **Abstract**
+
 The aim of our project is to **develop a website** that serves as an **intermediary platform between tenants and landlords**, allowing them to access properties for rent or list their available properties. The system is designed to offer convenient functionalities for both landlords and tenants.
 
 1. For **landlords**, the system supports user registration and login, enabling them to manage their accounts efficiently. Landlords can upload and manage their properties, view a list of tenants interested in their listings, and access ratings and comments associated with each tenant. Based on this information, landlords can decide whether to offer their property by sending a lease agreement through a streamlined process facilitated by our system. Additionally, landlords can contact interested tenants directly through a provided 'WhatsApp' link.
